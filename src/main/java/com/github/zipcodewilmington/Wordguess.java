@@ -48,7 +48,7 @@ public class Wordguess {
 //        print the current state of the player's guesses
 //        ask the player for a letter (a character)
 
-    System.out.println("your word is: " + secretWord);
+//    System.out.println("your word is: " + secretWord);
                 while (triesLeft > 0 && !wordGuessed) {
 
 
@@ -87,6 +87,7 @@ public class Wordguess {
                     System.out.println("*** ****");
                     System.out.println(secretWord);
                     System.out.println("Congratulations, You Won");
+
                 } else {
                     System.out.println(":-( :-( :-(");
                     System.out.println("You Lost! You ran out of guesses.");
@@ -94,21 +95,32 @@ public class Wordguess {
 
                     // Ask to play again
 
-                    System.out.println("Would you like to play again? (yes/no)");
+//                    System.out.println("Would you like to play again? (yes/no)");
+//                    String playAgain = scanner.nextLine().toLowerCase();
+//
+//                    if (!playAgain.equals("yes")) {
+//                        isGameOn = false;
+//                    } else {
+////                        scanner.close();
+//                        System.out.println("Game over!");
+////                        scanner.close();
+//
+//                    }
+
+
+
+            }
+            System.out.println("Would you like to play again? (yes/no)");
                     String playAgain = scanner.nextLine().toLowerCase();
 
                     if (!playAgain.equals("yes")) {
                         isGameOn = false;
                     } else {
+//                        scanner.close();
                         System.out.println("Game over!");
-                        scanner.close();
+//                        scanner.close();
 
                     }
-
-
-
-            }
-
 
         }
 
@@ -119,7 +131,7 @@ public class Wordguess {
     //Method to display current guessed letter
     public static void displayCurrentGuess(char[] playerGuesses) {
         for (char letter : playerGuesses) {
-            System.out.println(letter + " ");
+            System.out.print(letter + " ");
         }
     }
 
